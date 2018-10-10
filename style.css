@@ -1,16 +1,16 @@
-ul li {
+.demonstration li {
   list-style-type: none; 
  
  
 }
 
-ul li:first-of-type{
+.demonstration li:first-of-type{
   font-weight: bold; 
 }
 
 
 
-p {
+.sound {
   display: inline; 
 }
 
