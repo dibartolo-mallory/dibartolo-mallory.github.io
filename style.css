@@ -1,0 +1,20 @@
+ul li {
+  list-style-type: none; 
+ 
+ 
+}
+
+ul li:first-of-type{
+  font-weight: bold; 
+}
+
+
+
+p {
+  display: inline; 
+}
+
+button {
+  margin-left: 30px; 
+  
+}
