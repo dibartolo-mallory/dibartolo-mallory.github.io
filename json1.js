@@ -5,5 +5,5 @@ xmlhttp.onreadystatechange = function() {
         document.getElementById("demo").innerHTML = myObj.name;
     }
 };
-xmlhttp.open("GET", "json1.json", true);
+xmlhttp.open("GET", "/json1.json", true);
 xmlhttp.send();
