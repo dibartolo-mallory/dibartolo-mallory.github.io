@@ -1,3 +1,21 @@
+var section = document.getElement By Id('dogInfo'); 
+var requestURL = 'https://dog.ceo/api/breeds/list/all
+';
+var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json'; 
+    request.send(); 
+
+    request.onload = function() {
+    var dogData = request.response;
+        //populateSection(townData); 
+        showDogs(dogData);
+    }
+    
+function showDogs(dogData) {
+    var dogs = dogData['dogs']; 
+    document.getElementById('dogOne').innerHTML = dogs[0].name; 
+}
 
 function dogOption() {
 //build the dog page 
