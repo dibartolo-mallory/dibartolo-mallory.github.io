@@ -1,4 +1,4 @@
-var section = document.getElement By Id('dogInfo'); 
+var section = document.getElementById('dogInfo'); 
 var requestURL = 'https://dog.ceo/api/breeds/list/all
 ';
 var request = new XMLHttpRequest();
