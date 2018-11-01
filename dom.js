@@ -1,8 +1,13 @@
-var section = document.getElementById('dogInfo'); 
+/*var section = document.getElementById('dogInfo'); 
 var requestURL = 'https://dog.ceo/api/breeds/list/all
 ';
 var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
+    request.open('GET', 'https://dog.ceo/api/breeds/list/all', true);
+    xhttp.onreadystatechange == 4 && this.status == 200 {
+        var response = JSON.parse(this.responseText);
+        
+    }
+
     request.responseType = 'json'; 
     request.send(); 
 
@@ -15,7 +20,7 @@ var request = new XMLHttpRequest();
 function showDogs(dogData) {
     var dogs = dogData['dogs']; 
     document.getElementById('dogOne').innerHTML = dogs[0].name; 
-}
+}*/
 
 function dogOption() {
 //build the dog page 
