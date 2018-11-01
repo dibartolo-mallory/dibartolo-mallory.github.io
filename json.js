@@ -11,7 +11,7 @@ var request = new XMLHttpRequest();
         showTown(townData);
     }*/
     
-function ajax_get(url, callback) {
+/*function ajax_get(url, callback) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -31,7 +31,7 @@ function ajax_get(url, callback) {
 }
  
 ajax_get('https://dog.ceo/api/breeds/image/random', function(data) {
-    document.getElementById("title").innerHTML = data["title"];
+    document.getElementById("title").innerHTML = data["title"];*/
     
 function dogOption() {
 //build the dog page 
