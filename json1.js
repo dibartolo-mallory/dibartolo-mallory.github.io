@@ -12,7 +12,7 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-        document.getElementById("demo").innerHTML = myObj.message;
+        document.getElementById("demo").innerHTML = myObj.message[0];
     }
 };
 xmlhttp.open("GET", "https://dog.ceo/api/breeds/list/all
