@@ -15,6 +15,6 @@ xmlhttp.onreadystatechange = function() {
         document.getElementById("demo").innerHTML = myObj.name;
     }
 };
-xmlhttp.open("GET", "/json.json", true);
+xmlhttp.open("GET", "json.json", true);
 xmlhttp.send();
 
