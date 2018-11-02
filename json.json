@@ -25,3 +25,4 @@
 //to access the favorite food of the first user 
 //users[0].favoriteFoods[2]; 
 
+//myObj.pets[0].animal;
