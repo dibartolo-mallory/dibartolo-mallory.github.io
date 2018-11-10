@@ -40,7 +40,7 @@ firstElement.appendChild(heading);
 //establishing constants for the elements in the dog name list maker
 const section = document.getElementById('section2'); 
 const ul = document.getElementById('nameList');
-const addButton = document.getElementById('addItem');
+const addButton = document.getElementById('addName');
 const deleteButton = document.getElementById('deleteList');
 const input = document.getElementById('item');
 //an array that stores the names entered by the user
