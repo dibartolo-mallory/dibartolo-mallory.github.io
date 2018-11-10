@@ -1,4 +1,4 @@
-//AJAX request of random dog photo api
+//AJAX requests random dog pictures
 var xmlhttp = new XMLHttpRequest();
 //executes the following function when the request receives an answer
 xmlhttp.onreadystatechange = function() {
@@ -15,157 +15,66 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", "https://dog.ceo/api/breeds/image/random", true);
 //sends the request to the server- used for GET
 xmlhttp.send();
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
+/////////////////////////////////
+/////////////////////////////////
 
-/*var section = document.getElementById('dogInfo'); 
-var requestURL = 'https://dog.ceo/api/breeds/list/all
-';
-var request = new XMLHttpRequest();
-    request.open('GET', 'https://dog.ceo/api/breeds/list/all', true);
-    xhttp.onreadystatechange == 4 && this.status == 200 {
-        var response = JSON.parse(this.responseText);
-        
-    }
-
-    request.responseType = 'json'; 
-    request.send(); 
-
-    request.onload = function() {
-    var dogData = request.response;
-        //populateSection(townData); 
-        showDogs(dogData);
-    }
-    
-function showDogs(dogData) {
-    var dogs = dogData['dogs']; 
-    document.getElementById('dogOne').innerHTML = dogs[0].name; 
-}*/
-
-function dogOption() {
-//build the dog page 
+//Dom manipulation- adding markup and text for heading and paragraph
 var heading = document.createElement("h1");
-var headingNode = document.createTextNode("A Page About Dogs");
-heading.appendChild(headingNode);
-var firstElement = document.getElementById("section1"); 
-firstElement.appendChild(heading);
- 
-var heading = document.createElement("h2");
 var headingNode = document.createTextNode("Man's Best Friend");
 heading.appendChild(headingNode);
 var firstElement = document.getElementById("section1"); 
 firstElement.appendChild(heading);
 
-var para = document.createElement("p");
-var node = document.createTextNode("Dogs are loyal, fun, cuddly, and sweet.");
-para.appendChild(node);
-var element = document.getElementById("section2");
-element.appendChild(para);
-  
-var image = document.createElement('img'); 
-image.setAttribute("src", "http://cdn.akc.org/content/hero/puppy-boundaries_header.jpg");
-image.setAttribute("height", "228");
-image.setAttribute("alt", "Adorable puppy.");
-document.body.appendChild(image); 
- 
- //delete elements that are no longer needed
-var parent = document.getElementById("buttons");
-var child1 = document.getElementById("dogButton");
-parent.removeChild(child1);
- 
- var child2 = document.getElementById("catButton"); 
-  parent.removeChild(child2); 
-  
-  var body = document.getElementById("wrapper"); 
-  var heading = document.getElementById("heading1"); 
-  body.removeChild(heading); 
-  
-  
-  //var list = document.getElementById("nameList"); 
- // var input = document.getElementById("item"); 
- // var button = document.getElementById("addItem");
-  
-
-}
-
-
-
-function catOption() {
-  
-var heading = document.createElement("h1"); 
-var headingNode = document.createTextNode("A Page About Cats");
+var heading = document.createElement("p");
+var headingNode = document.createTextNode("Furry, Cuddly, Cute, Loyal");
 heading.appendChild(headingNode);
 var firstElement = document.getElementById("section1"); 
-firstElement.appendChild(heading);
-  
-var heading = document.createElement("h2"); 
-var headingNode = document.createTextNode("Cats aren't man's best friend, but they're still cool.");
-heading.appendChild(headingNode);
-var firstElement = document.getElementById("section1"); 
-firstElement.appendChild(heading);
+firstElement.appendChild(heading);  
 
-var para = document.createElement("p");
-var node = document.createTextNode("Cats are soft, friendly, and sweet.");
-para.appendChild(node);
-var element = document.getElementById("section2");
-element.appendChild(para);
-  
-var image = document.createElement('img'); 
-image.setAttribute("src", "https://www.cats.org.uk/uploads/images/featurebox_sidebar_kids/grief-and-loss.jpg");
-image.setAttribute("height", "228");
-image.setAttribute("alt", "Adorable puppy.");
-document.body.appendChild(image); 
-  
-//remove elements not needed  
-var parent = document.getElementById("buttons");
-var child1 = document.getElementById("dogButton");
-parent.removeChild(child1);
  
-var child2 = document.getElementById("catButton"); 
-  parent.removeChild(child2); 
-  
-  var body = document.getElementById("wrapper"); 
-  var heading = document.getElementById("heading1"); 
-  body.removeChild(heading); 
-  
+///////////////////////////////////
+//Local storage of a list of dog names created by the user
+//Using JSON parse and stringify to get and store the data
 
+
+//establishing constants for the elements in the dog name list maker
+const section = document.getElementById('section2'); 
+const ul = document.getElementById('nameList');
+const addButton = document.getElementById('addItem');
+const deleteButton = document.getElementById('deleteList');
+const input = document.getElementById('item');
+//an array that stores the names entered by the user
+//the array will include any items in localstorage previously entered by the user
+//and will be available for any new entries by the user
+let namesArray = localStorage.getItem('names') ? JSON.parse(localStorage.getItem('names')) : [];
+//stringify the array for localstorage
+localStorage.setItem('names', JSON.stringify(namesArray));
+//a constant that stores items in localstorage so they can be used in the display 
+const data = JSON.parse(localStorage.getItem('names'));
+//creates list items for the unordered name list
+const buildList = (text) => {
+  const li = document.createElement('li');
+  li.textContent = text;
+  ul.appendChild(li);
 }
+//when the user clicks the addButton names are added to the array
+//input field is cleared for a new entry
+addButton.addEventListener('click', function (e) {
+  namesArray.push(input.value);
+  localStorage.setItem('names', JSON.stringify(namesArray));
 
-//var list = document.getElementById('nameList'); 
-function addName() {
+  buildList(input.value);
+  input.value = "";
+});
 
-  var myItem = document.getElementById('nameInput').value; 
-  myItem.value = ''; 
-
- //document.write(myItem); 
- // myItem.value = ' '; 
-  var listItem = document.createElement("li"); 
-  //var listItem = document.createElement('li');
-  var listItemNode = document.createTextNode(myItem);
-  //listText.textContent = myItem; 
-  listItem.appendChild(listItemNode);
-  //listItem.appendChild(listText);
-  var nameList = document.getElementById("nameList"); 
-  nameList.appendChild(listItem);
-  
-  document.getElementById("nameInput").value = '';
-  
-  //list.appendChild(listItem); 
-  
-  
-   
- /* var name = getElementById("item").value;
-  
-  var listItem = document.createElement("li"); 
-  var listItemNode = document.createTextNode(name);
-  listItem.appendChild(listItemNode);
-  var nameList = document.getElementById("nameList"); 
-  nameList.appendChild(listItem);*/
- 
-  /*var para = document.createElement("p");
-var node = document.createTextNode("Cats are soft, friendly, and sweet.");
-para.appendChild(node);
-var element = document.getElementById("section2");
-element.appendChild(para);*/
-  
-}
+//loops through the items retreived and parsed from local storage and displays them
+data.forEach(item => {
+  buildList(item);
+});
+//deletes the list from the screen as well as the names from local storage
+deleteButton.addEventListener('click', function () {
+  localStorage.clear();
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
+  }
+});

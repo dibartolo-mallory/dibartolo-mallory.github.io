@@ -3,39 +3,44 @@
 	<head>
 		<title>Di Bartolo | CIT261</title>
 		<meta charset="UTF-8"/>
-    	<link href="style.css" type="text/css" rel="stylesheet" />
-      
+    	
+      <style>
+        #buttons {
+            display: grid;
+            width: 20%;
+            grid-template-columns: 1fr 1fr;
+  
+            }
+        
+        
+        </style>
         
 	</head>
 	<body>
 		
-<div id="wrapper">
-<h1 id="heading1">Let's Build a Web Page</h1>
-<div id="buttons">
-  <button id="dogButton" onclick="dogOption()">Dog Person</button>
 
-  <button id="catButton" onclick="catOption()">Cat Person</button>
-</div>
+        
+<section id="section1"></section>
 
-<div id="section1"></div>
+<section id="section2">
 
-<div id="section2"></div>
-
-<div id="pic"></div>
- 
-
-  <div>
       <label for="item">Enter A Dog Name:</label>
-      <input type="text" name="item" id="nameInput">
-      <button id="addItem" onclick="addName()">Add item</button>
-</div>
-
-    <ul id="nameList">
-
-    </ul>
+      <input type="text" name="item" id="item">
+ 
+      <button id="addItem" onclick="addName()">Add Name</button>
 
   
-</div>
+<ul id="nameList">
+</ul>
+  <button id="deleteList" onclick="addName()">Delete List</button>
+  
+  <div id="testDiv"></div>
+
+
+</section>
+
+<div id="pic"></div>
+
 		
 		
 
