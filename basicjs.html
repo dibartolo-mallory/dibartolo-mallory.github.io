@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Di Bartolo | CIT261</title>
+		<meta charset="UTF-8"/>
+    	
+      <style>
+        
+          ul li {
+            display: inline-block; 
+            width: 50px; 
+            padding: 10px 16px;
+            background-color: red;
+            cursor: pointer;
+            text-align: center; 
+            font-family: sans-serif; 
+          }
+
+          ul li a {
+            text-decoration: none; 
+            color: #ffffff; 
+  
+          }
+
+        .active, .navItem:hover {
+            background-color: #666;
+            color: white;
+          }
+
+        #message {
+            color: red; 
+            font-size: 1.2em; 
+          }
+
+        button {
+            display: block; 
+            padding: 5px; 
+            background-color: #d3d3d3; 
+            font-size: 1.2em; 
+            color: 000000; 
+          }
+
+        section {
+            margin-left: 40px; 
+          }
+        
+        
+        </style>
+        
+	</head>
+	<body>
+		
+        <ul id="navList">
+            <li class="navItem active"><a href="#">Home</a></li>
+            <li class="navItem"><a href="#">About</a></li>
+            <li class="navItem"><a href="#">Page</a></li>
+            <li class="navItem"><a href="#">Page</a></li>
+            <li class="navItem"><a href="#">Contact</a></li>
+        </ul>
+
+        <section>
+            <label>Type Something and Submit: </label>
+            <input type="text" id="userInput" required>
+            <button onclick="checkValue()">Submit</button>
+            <div id="message"></div>
+        </section>
+
+
+
+		
+		
+	</body>
+    <script src="basicjs.js"></script>
+</html>
