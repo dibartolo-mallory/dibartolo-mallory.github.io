@@ -1,0 +1,66 @@
+/* selection */
+.design-selection > h3 {
+	display: none;
+}
+.design-selection {
+  display: block;
+}
+.design-selection nav ul li {
+  margin-top: 20px;
+  color: rgb(56, 49, 112);
+}
+.design-selection nav ul li a {
+  color: white;
+}
+.design-selection a:hover {
+  color: rgb(56, 49, 112);
+}
+
+/* archives */
+
+.design-archives {
+  display: block;
+  cursor: pointer;
+  margin-top: 40px;
+}
+.design-archives nav ul {
+  padding-left: 0;
+}
+.design-archives nav ul li {
+  text-align: center;
+  width: 60%;
+  padding: 40px;
+  display: block;
+  background-color: rgba(56,49,112, 0.85);
+  border-radius: $border-radius;
+  margin: 20px 0 20px 40px;
+}
+.design-archives nav ul li a {
+	color: white;
+}
+.design-archives nav ul li:hover {
+  background-color: rgb(56, 49, 112);
+}
+
+
+/* resources */
+.zen-resources > h3 {
+	display: none;
+}
+
+.zen-resources {
+  width: 90%;
+  color: $text-color-one;
+  margin-top: 40px;
+}
+
+.zen-resources ul li {
+  display: block;
+  margin-top: 20px;
+}
+.zen-resources ul li a {
+  color: white;
+}
+.zen-resources a:hover {
+  color: rgb(56, 49, 112);
+}

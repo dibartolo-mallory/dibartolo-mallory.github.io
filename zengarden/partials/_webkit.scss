@@ -1,0 +1,22 @@
+*{
+       ::-webkit-scrollbar {
+    width: 20px;
+   background-color: transparent; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent; 
+    opacity: 0; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: url(images/star.svg) 100% no-repeat; 
+}
+    
+::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0);
+}
+
+}

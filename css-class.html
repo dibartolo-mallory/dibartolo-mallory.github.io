@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Di Bartolo | CIT261</title>
+		<meta charset="UTF-8"/>
+    	
+      <style>
+       .wrapper {
+  display: flex;
+  height: 100%;
+  margin: 0px;
+}
+
+.dots {
+  position: absolute;
+  left: 20px;
+}
+
+.dot,
+.dot:before,
+.dot:after {
+  cursor: pointer;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 20px;
+  background-color: #000000;
+  transform: rotate(270deg);
+}
+
+.dot {
+  top: 50px;
+  right: 0;
+}
+
+.dot:before,
+.dot:after {
+  content: "";
+}
+
+.dot:before {
+  right: 10px;
+  transition: right .3s ease-out, width .3s ease-out;
+}
+
+.dot:after {
+  left: 10px;
+  transition: left .3s ease-out, width .3s ease-out;
+}
+
+.menu-icon {
+  transform: translate(0vw);
+  transition: 0.5s;
+  margin-top: -20px;
+}
+
+.menu {
+  display: flex;
+  transform: translate(-40vw);
+}
+.menu .link {
+  display: none;
+}
+
+.slide-button {
+  z-index: 1;
+  transform: translate(1vw);
+  transition: 0.6s;
+}
+.slide-button .dots, .slide-button .dot:before {
+  right: -8px;
+  width: 22px;
+  transform: rotate(225deg);
+  background-color: #ffffff;
+}
+.slide-button .dots, .slide-button .dot:after {
+  left: -8px;
+  width: 22px;
+  transform: rotate(135deg);
+  background-color: #ffffff;
+}
+
+.slide-menu {
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+  width: 300px;
+  transform: translate(0vw);
+  transition: .5s;
+}
+.slide-menu .link {
+  display: flex;
+  justify-content: center;
+  margin: 15px 40px;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+.slide-menu .link:hover {
+  color: tan;
+  cursor: pointer;
+}
+
+.menu {
+  padding: 5px;
+  height: 250px;
+}
+
+        
+        
+        </style>
+        
+	</head>
+	<body>
+		<div class="wrapper">
+
+            <div class="dots menu-icon" id="menu-icon" onclick="toggleNav()">
+            <div class="dot"></div>
+            </div>
+
+            <div class="menu" id="menu">
+                <span class="link">Home</span>
+                <span class="link">About</span>
+                <span class="link">Contact</span>
+                <span class="link">Blog</span>
+            </div>
+
+
+        </div>
+
+ 
+
+		
+		
+	</body>
+    <script src="css-class.js"></script>
+</html>

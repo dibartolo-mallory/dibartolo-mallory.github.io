@@ -1,0 +1,27 @@
+.preamble {
+	@include container-size;
+}
+
+.summary {
+	@include container-size;
+}
+
+.explanation {
+	@include container-size;
+	background-color: $background-color-two;
+}
+
+.participation {
+	@include container-size;
+	@include container-basics;
+}
+
+.benefits {
+	@include container-size;
+	background-color: $background-color-two;
+}
+
+.requirements {
+	@include container-size;
+	background-color: $background-color-two;
+}

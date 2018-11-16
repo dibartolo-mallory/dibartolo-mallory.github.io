@@ -1,0 +1,176 @@
+@mixin content-blocks {
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    background: $content-color; 
+     background: linear-gradient(323deg, #484372, #383170, #1e165e);
+    //background: linear-gradient(323deg, #63dfbf, #489aac, #b7f0e4);
+    background-size: 600% 600%;
+    animation: AnimationPreamble 15s ease infinite;
+    h3 {
+        color: $text-color-one;   
+        text-align: center; 
+        font-size: 2.5em;  
+        animation: fadeIn .75s ease; 
+    }
+    
+    p {
+        display: none; 
+        color: $text-color-one;   
+    }
+    @media screen and (max-width: 768px){
+        p {
+            display: inline-block;
+           
+            overflow: auto;
+        }
+    }
+       
+}
+
+
+
+
+
+
+
+/*.explanation {
+    display: flex; 
+    //justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    //background: url(images/comet.png) 100% 10% no-repeat; 
+}
+
+.explanation h3 {
+        color: white;   
+        text-align: center; 
+       
+        font-size: 2.5em;  
+        animation: fadeIn .75s ease;
+}
+.explanation p {
+   display: none; 
+   color: #ffffff; 
+    
+    } */
+
+
+@media screen and (min-width: 768px){   
+.main div:hover {
+   
+    overflow: scroll;
+    //background: $comet-one 100% no-repeat; 
+    background-color: $background-color-one; 
+    
+    //background-size: 100% 100%;
+    //animation: hoverAnimation 3s ease infinite;
+   
+    
+    h3{
+        display: none; 
+        //animation: fadeOut .75s ease;
+    }
+    p {
+      display: inline-block;
+        
+      animation: fadeIn .75s ease; 
+        
+    }
+
+}
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+    }
+    
+    25% {
+        opacity: .25
+    }
+    
+    50% {
+        opacity: .5; 
+    }
+    
+    75% {
+        opacity: .75; 
+    }
+    
+    100% {
+        opacity: 1; 
+    }    
+}
+
+@keyframes fadeOut {
+    0% { 
+        opacity: 1; 
+    }
+    
+    25% {
+        opacity: .75
+    }
+    
+    50% {
+        opacity: .5; 
+    }
+    
+    75% {
+        opacity: .25; 
+    }
+    
+    100% {
+        opacity: 0; 
+    }    
+}
+
+@keyframes hoverAnimation{ 
+    0% {
+         
+        background-position: 100% -50%;   
+        
+    }
+    
+    50% {
+       
+        background-position: 80% 35%;  
+        
+    }
+    
+    90% {
+       
+        background-position: 60% 200%; 
+    }
+}
+
+@mixin scrollbar {
+   ::-webkit-scrollbar {
+    width: 20px;
+    background: transparent; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none; 
+    opacity: 0; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: url(images/star.svg) 100% no-repeat; 
+}
+    
+::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0);
+}
+
+/* Handle on hover 
+::-webkit-scrollbar-thumb:hover {
+    background: $text-color-two; 
+} */
+}
+
+
+
+

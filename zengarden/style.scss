@@ -1,0 +1,344 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300,500,700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+@import url('https://fonts.googleapis.com/css?family=Jura:300,400');
+
+
+
+
+
+//-----variables-------//
+//colors
+$background-color-one: rgb(145, 47, 85);
+$background-color-two: rgb(110, 35, 145);
+$text-color-one: rgb(255, 255, 255);
+$text-color-two: rgb(251,214,196);
+$content-color: rgb(56,49,112);
+$heading-color: rgb(28,181,171);
+
+//images
+$background-image: url("images/bg6.jpg");
+$astronaut-one: url("images/auone.png");
+$astronaut-two: url("images/autwo.png");
+$astronaut-three: url("images/authree.png");
+$astronaut-four: url("images/aufour.png");
+$planet-two: url("images/pl2.png");
+$comet-one: url("images/comet.svg");
+//text
+$font-family-one: 'Quicksand', sans-serif;
+$font-family-two: 'Jura', sans-serif;
+$font-size-text: 18px;
+$font-size-header: 4em;
+$font-size-header-small: 2.5em;
+$font-size-header2: 20px;
+$small-element-height: 35px;
+
+//borders
+$border-one: 1px solid grey;
+$border-radius: 10px;
+
+/* partials */
+@import 'partials/mainContent';
+
+//mixins
+@mixin container-size {
+	width: 70%;
+	height: auto;
+	border: 2px solid transparent;
+	border-radius: 20px;
+	margin: 20px auto 20px auto;
+	padding: 20px;
+}
+
+@mixin container-large {
+    width: 85%;
+    height: 162.5px;
+    border: 2px solid transparent;
+    margin: 0 0 18px 10px;
+}
+
+@mixin container-basics {
+	background-color: $background-color-one;
+	color: $text-color-one;
+}
+
+@import'partials/webkit';
+
+body {
+    margin: 0 auto;
+    font-family: $font-family-two;
+    font-weight: 300;
+    background-image: $background-image;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+a {
+    color: $heading-color;
+
+}
+
+p {
+	font-family: $font-family-one;
+	font-size: $font-size-text;
+}
+header {
+    @include container-basics;
+    padding: 20%;
+    text-align: center;
+    background: url(images/autwo.png) 100% 10% no-repeat, url(images/pl1.png) right bottom no-repeat, url(images/pl2.png) -20% 20% no-repeat, url(images/pl3.png) left bottom no-repeat;
+}
+header > h1 {
+	font-size: $font-size-header-small;
+}
+header > h2 {
+	font-size: $font-size-header2;
+    color: $text-color-one;
+}
+.preamble {
+    color: $text-color-one;
+    width: 70%;
+    height: auto;
+    margin: -50px auto 10px auto;
+    padding: 20px;
+    border-radius: 40px;
+    background: linear-gradient(323deg, #63dfbf, #489aac, #b7f0e4);
+    background: linear-gradient(323deg, #63dfbf, #489aac, #b7f0e4);
+    background-size: 600% 600%;
+    animation: AnimationPreamble 15s ease infinite;
+
+@keyframes AnimationPreamble {
+    0%{background-position:15% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:15% 0%}
+}
+
+}
+
+.preamble h3 {
+    font-size: 1.3em;
+    text-align: center;
+}
+.summary {
+    width: 90%;
+    margin: -80px auto 50px auto;
+    padding: 20px;
+    color: $heading-color;
+    text-align: center;
+}
+.summary p {
+    font-size: 10px;
+}
+.summary p a {
+    color:$text-color-two;
+}
+.explanation {
+	@include container-size;
+	//background-color: $content-color-one;
+    @include content-blocks;
+    @include scrollbar;
+
+}
+.participation {
+	@include container-size;
+	@include container-basics;
+    @include content-blocks;
+}
+.benefits {
+	@include container-size;
+	//background-color: $content-color-two;
+    @include content-blocks;
+}
+.requirements {
+	@include container-size;
+	//background-color: $content-color-one;
+  @include content-blocks;
+}
+.design-selection {
+	display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+		margin: auto;
+}
+footer a {
+	font-size: 36px;
+	margin: 10px;
+	text-decoration: none;
+	color: $content-color;
+}
+footer a:hover {
+    color: white;
+}
+.design-archives > h3 {
+	display: none;
+}
+ul li {
+	list-style: none;
+}
+ul li a {
+	text-decoration: none;
+}
+
+aside {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.sidebar {
+		display: grid;
+		grid-column: 1;
+		grid-row: 2/4;
+		margin-top: 75px;
+		@import 'partials/sidebar';
+	}
+	aside {
+		background-image: url(images/aufour.png);
+		background-size: auto;
+		background-position-x: 50%;
+		background-position-y: 98%;
+		background-repeat: no-repeat;
+	}
+
+
+    footer {
+      text-align: center;
+}
+footer a {
+	color: $heading-color;
+}
+    .page-wrapper {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: repeat(2, 50%);
+
+    }
+
+    body {
+        background-image: $background-image;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+     }
+
+    .intro {
+        grid-column-start: 1;
+        grid-column-end: span col2-end;
+        grid-row-start: 1;
+        grid-row-end: span 1;
+       /* display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(7, 20%);
+        grid-row-gap: 10px;*/
+
+
+    }
+    header {
+       /* width: 90%;
+        margin: 0 auto; */
+        height: 200px;
+        background: $background-color-one;
+        color: $text-color-one;
+        background: url(images/autwo.png) 90% 20% no-repeat, url(images/pl1.png) right bottom no-repeat, url(images/pl2.png) -20% 10% no-repeat, url(images/pl3.png) left bottom no-repeat;
+        /*grid-column-start: 1;
+        grid-column-end: span col2-end;
+        grid-row-start: 1;
+        grid-row-end: span 1; */
+
+    }
+    header > h1 {
+            font-size: $font-size-header;
+    }
+
+
+    .summary p {
+        font-size: 15px;
+    }
+
+
+
+    .preamble {
+        /*grid-column-start: 1;
+        grid-column-end: span col2-end;
+        grid-row-start: 3;
+        grid-row-end: span 3; */
+        width: 90%;
+    }
+
+    .preamble h3 {
+        font-size: 2em;
+    }
+
+    header h1 {
+        width: 33%;
+        margin: 0 auto;
+
+    }
+
+    header h2 {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .main {
+        grid-column-start: 2;
+        grid-column-end: span col2-end;
+        grid-row-start: 2;
+        grid-row-end: span 2;
+        margin-top: 75px;
+
+    }
+
+    .explanation {
+        margin-top: 70px;
+    }
+
+
+    .main > div {
+
+        @include container-large;
+
+    }
+
+
+
+
+
+
+
+
+    }
+
+
+
+@media screen and (min-width: 769px) and (max-width: 1000px){
+	.sidebar {
+		display: grid;
+		@import 'partials/sidebar';
+}
+
+header > h1 {
+	font-size: 3em;
+    color: $text-color-one;
+    width: 50%;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+	/* */
