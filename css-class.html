@@ -5,7 +5,9 @@
 		<meta charset="UTF-8"/>
     	
       <style>
-       .wrapper {
+ /* ======================================== 
+Slider Styling*/
+.sliderWrapper {
   display: flex;
   height: 100%;
   margin: 0px;
@@ -40,12 +42,10 @@
 
 .dot:before {
   right: 10px;
-  transition: right .3s ease-out, width .3s ease-out;
 }
 
 .dot:after {
   left: 10px;
-  transition: left .3s ease-out, width .3s ease-out;
 }
 
 .menu-icon {
@@ -106,31 +106,181 @@
   height: 250px;
 }
 
+/*======================================== 
+Mouse over styles*/
+.circle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 100px;
+  transition: all 1s ease-in;
+}
+
+#circleParagraph {
+  width: 200px;
+  height: 30px;
+  margin-left: 20px;
+  display: none;
+}
+
+.largerCircle {
+  transform: scale(1);
+  border-radius: 300px;
+  width: 300px;
+  height: 300px;
+  transition: all 1s ease-out;
+  background-image: linear-gradient(to right, black, darkred, red);
+}
+.largerCircle #circleParagraph {
+  display: block;
+  margin-left: 300px;
+  transform: translate(2vw);
+  transition: all 1s ease-out;
+}
+
+/*===============================
+On change styles*/
+.highlight {
+  background: linear-gradient(-45deg, blue, lightblue, green, lightgreen);
+  background-size: 400% 400%;
+  animation: Example 10s ease infinite;
+}
+
+@keyframes Example {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 25% 50%;
+  }
+  50% {
+    background-position: 50% 75%;
+  }
+  75% {
+    background-position: 75% 100%;
+  }
+}
+select {
+  width: 75px;
+  height: 30px;
+  font-size: 1.2em;
+  background-color: gray;
+  color: white;
+  border: none;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  border-radius: 7px;
+  background: gray;
+  font-size: .9em;
+  color: white;
+}
+
+/*==========================
+onfocus styles*/
+.inputHighlight {
+  background-color: yellow;
+}
+
+/*====================
+value check styles*/
+.correctValue {
+  background-color: lightgreen;
+}
+
+.incorrectValue {
+  border: 2px solid red;
+  animation: shake 0.5s;
+  animation-iteration-count: 4;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+
         
         
         </style>
         
 	</head>
 	<body>
-		<div class="wrapper">
+        <h1>onclick menu slider</h1>
+            <div class="sliderWrapper">
+                <div class="dots menu-icon" id="menu-icon" onclick="toggleNav()">
+                    <div class="dot"></div>
+                </div>
 
-            <div class="dots menu-icon" id="menu-icon" onclick="toggleNav()">
-            <div class="dot"></div>
+                <div class="menu" id="menu">
+                    <span class="link">Home</span>
+                    <span class="link">About</span>
+                    <span class="link">Contact</span>
+                    <span class="link">Blog</span>
+                </div>
+
+
             </div>
-
-            <div class="menu" id="menu">
-                <span class="link">Home</span>
-                <span class="link">About</span>
-                <span class="link">Contact</span>
-                <span class="link">Blog</span>
+        
+        <hr>
+        
+        <div id="mouseoverDiv">
+            <h1>onmouseover event + adding classes</h1>
+            <div id="circle" class="circle "onmouseover="addClass(this)"  >
+            <p id="circleParagraph">This circle just grew and now looks like a sphere. Also this content displayed because you hovered over the circle. Cool! </p>
             </div>
-
+        </div>
+        
+        <hr>
+        
+        <div id="onChangeDiv">
+            <h1>onchange with class added to the button</h1>
+            <p>When an option is selected from the drop-down, the submit button indicates to the user that it's time to submit by changing from a gray button to an animated gradient. </p>
+            <select onchange="onChange()">
+                <option value="one">One</option>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+                <option value="four">Four</option>
+            </select>
+            <button id="submitButton">Submit</button>
 
         </div>
+        
+        <hr>
+        
+        <div>
+            <h1>onfocus adds a class</h1>
+            <p>The field is highlighted when selected by the user.</p>
+            <input id="inputField" type="text" onfocus="onFocus()" onblur="onBlur()">
+        </div>
+        
+        <hr>
+        
+        <div>
+            <h1>checking input fields</h1>
+            <p>This input field only accepts the value of "blue" (lowercase, without quotes). The field will let you know through color/animation if you've entered the correct value. Give it a try!</p>
+            <input id="inputField2" type="text">
+            <button id="checkButton" onclick="check()">Check</button>
+        </div>
 
- 
-
-		
 		
 	</body>
     <script src="css-class.js"></script>
