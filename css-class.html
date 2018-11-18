@@ -5,7 +5,7 @@
 		<meta charset="UTF-8"/>
     	
       <style>
- /* ======================================== 
+/* ======================================== 
 Slider Styling*/
 .sliderWrapper {
   display: flex;
@@ -143,10 +143,10 @@ On change styles*/
 .highlight {
   background: linear-gradient(-45deg, blue, lightblue, green, lightgreen);
   background-size: 400% 400%;
-  animation: Example 10s ease infinite;
+  animation: gradientAnimation 10s ease infinite;
 }
 
-@keyframes Example {
+@keyframes gradientAnimation {
   0% {
     background-position: 0% 25%;
   }
@@ -192,11 +192,11 @@ value check styles*/
 
 .incorrectValue {
   border: 2px solid red;
-  animation: shake 0.5s;
+  animation: alert 0.5s;
   animation-iteration-count: 4;
 }
 
-@keyframes shake {
+@keyframes alert {
   0% {
     transform: rotate(0deg);
   }
@@ -216,7 +216,13 @@ value check styles*/
     transform: rotate(5deg);
   }
 }
-
+/*===========================
+touch event styling*/
+.touchBackgroundAnimation {
+  background: linear-gradient(-45deg, yellow, orange, red);
+  background-size: 500% 500%;
+  animation: gradientAnimation 10s ease infinite;
+}
 
         
         
@@ -280,7 +286,17 @@ value check styles*/
             <input id="inputField2" type="text">
             <button id="checkButton" onclick="check()">Check</button>
         </div>
+        
+        <hr>
+        
+        <div id="mobileEventsDiv">
+            <h1>This is a canvas. Touch and hold the screen inside the square to see an animation respond to the touch event. Lift finger to end animation. </h1>
+            <canvas id="canvas" width="500" height="300" style="border: solid black 1px;">
 
+    
+            </canvas>
+
+        </div>
 		
 	</body>
     <script src="css-class.js"></script>
