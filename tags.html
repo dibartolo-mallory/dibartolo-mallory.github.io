@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Di Bartolo | CIT261</title>
+		<meta charset="UTF-8"/>
+    	
+      <style>
+
+
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 25% 50%;
+  }
+  50% {
+    background-position: 50% 75%;
+  }
+  75% {
+    background-position: 75% 100%;
+  }
+}
+
+/*===========================
+touch event styling*/
+.touchBackgroundAnimation {
+  background: linear-gradient(-45deg, red, silver, gold, green);
+  background-size: 500% 500%;
+  animation: gradientAnimation 10s ease infinite;
+}
+    
+          h1 {
+              color: green;
+          }
+          
+          h2 {
+              color: red; 
+          }
+
+        
+        
+        </style>
+        
+	</head>
+    <body>
+        
+        <h1>A Christmas-Themed Demonstration of HTML5 Video, Audio, and Canvas Tags</h1>
+        
+        <h2>Video Tag: Must Be Santa!</h2>
+        
+        <video width="320" height="240" controls>
+            <source src="https://st.depositphotos.com/1518767/1538/v/600/depositphotos_15381225-stock-video-animation-of-santa-claus-and.mp4" type="video/mp4">
+
+        </video>
+        
+        <h2>iFrame: Light the World</h2>
+        <p>(this is my ward!)</p>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LYgkVedWSaE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <h2>Audio Tag: Just Hear Those Sleigh Bells Jingling! </h2>
+        
+        <audio controls>
+            <source src="https://freesound.org/data/previews/371/371221_5063951-lq.mp3" type="audio/mpeg">
+        </audio>
+        
+        <h2>Canvas Tag: It's Beginning to Look a lot Like Christmas!</h2>
+        <p>(touch and hold the canvas box area to see to the pretty colors)</p>
+         <canvas id="canvas" width="500" height="300" style="border: solid black 1px;">
+
+    
+        </canvas>
+		
+	</body>
+    <script src="css-class.js"></script>
+</html>
