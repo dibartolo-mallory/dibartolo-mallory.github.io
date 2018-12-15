@@ -271,6 +271,17 @@ h1, p {
     
 }
 
+.planetInfo ::-webkit-scrollbar {
+    width: 20px;
+    background: transparent; }
+  .planetInfo ::-webkit-scrollbar-track {
+    background: none;
+    opacity: 0; }
+  .planetInfo ::-webkit-scrollbar-thumb {
+    background: #000000 }
+  .PlanetInfo ::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0); }
+
 .planetInfo h2, p {
     color: black; 
 }
