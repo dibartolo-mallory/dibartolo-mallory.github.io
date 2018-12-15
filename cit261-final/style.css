@@ -1,0 +1,528 @@
+body {
+    background-color: black; 
+    background:#000 url("stars.png") repeat top center;
+    
+}
+
+.twinkle-wrapper {
+     background:transparent url("twinkling.png") repeat top center;
+  
+  -webkit-animation: twinkle 200s linear infinite;
+  animation: twinkle 200s linear infinite;
+    z-index: -1; 
+    
+}
+
+nav {
+    background-color: transparent; 
+    position: sticky;
+    z-index: 10; 
+    display: flex;
+    align-content: center; 
+    justify-content: flex-end; 
+    margin-right: 10px; 
+}
+nav ul li {
+    font-family: sans-serif; 
+    display: inline-block; 
+    margin: 8px; 
+    font-size: 1.5em; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; 
+
+}
+nav ul li a:hover {
+    text-decoration: none;
+    color: gold; 
+   
+
+}
+
+nav ul li:hover {
+   
+    transition: transform .0001s linear; 
+    -webkit-transform: scale(1.2);
+     -ms-transform: scale(1.2); 
+    transform: scale(1.2); 
+    
+}
+
+
+.comet {
+    background-image: url(comet-1.svg); 
+    width: 100px;
+    height: 100px; 
+    position: absolute;
+    top: -10%; 
+    left: 100%; 
+    -webkit-animation: falling 10s linear 9s infinite;
+    animation: falling 10s linear 9s infinite; 
+    z-index: 0; 
+    
+}
+
+.comet-two {
+    background-image: url(comet-2.svg); 
+    width: 100px;
+    height: 100px; 
+    position: absolute;
+    left: 100%; 
+    -webkit-animation: falling 7s linear 5s infinite;
+    animation: falling 7s linear 5s infinite;
+    z-index: 0; 
+    
+}
+
+@-webkit-keyframes falling {
+
+  0% {
+       -ms-transform: translate(-20%, 20%);
+     -webkit-transform: translate(-20%, 20%);
+    transform: translate(-20%, 20%);
+  }
+
+    75% {
+        -ms-transform: translate(-20%, 20%);
+     -webkit-transform: translate(-20%, 20%);
+        transform: translate(-1000%, 1000%); 
+    }
+       100% {
+           -ms-transform: translate(-20%, 20%);
+     -webkit-transform: translate(-20%, 20%);
+    transform:translate(-1000%, 1000%);
+   
+  }
+  
+}
+
+
+@keyframes falling {
+
+  0% {
+       -ms-transform: translate(-20%, 20%);
+        -webkit-transform: translate(-20%, 20%);
+    transform: translate(-20%, 20%);
+  }
+
+    75% {
+         -ms-transform: translate(-20%, 20%);
+        -webkit-transform: translate(-20%, 20%);
+        transform: translate(-1000%, 1000%); 
+    }
+       100% {
+            -ms-transform: translate(-20%, 20%);
+        -webkit-transform: translate(-20%, 20%);
+    transform:translate(-1000%, 1000%);
+   
+  }
+  
+}
+
+
+
+#text {
+    background-color: white; 
+}
+
+@keyframes twinkle {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes twinkle {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+
+.wrapper {
+    width: 100%;
+    height: 100%; 
+    display: inline-flex;
+    position: sticky; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 10; 
+    
+  
+}
+ 
+
+.planet img:hover{
+  cursor: pointer; 
+  transition: transform .5s ease-in-out; 
+     -webkit-transform: scale(1.2); 
+         -ms-transform: scale(1.2); 
+  transform: scale(1.2); 
+}
+
+
+
+
+#sunWrap {
+    
+    display: inline-block; 
+    width: 60%; 
+    height: 60%; 
+   
+   
+
+}
+
+#mercuryWrap {
+    display: inline-block; 
+    width: 10%;
+    height: 10%; 
+    position: static; 
+  
+    
+    
+  
+}
+
+#venusWrap {
+    display: inline-block; 
+    width: 20%;
+    height: 20%; 
+   
+   
+}
+
+#earthWrap {
+    display: inline-block; 
+    width: 20%;
+    height: 20%; 
+  
+
+}
+
+#marsWrap {
+    display: inline-block; 
+    width: 15%;
+    height: 15%; 
+   
+   
+}
+
+#jupiterWrap {
+    display: inline-block; 
+    width: 30%;
+    height: 30%; 
+   
+   
+}
+
+#saturnWrap {
+    display: inline-block; 
+    width: 28%;
+    height: 28%; 
+  
+   
+}
+
+#uranusWrap {
+    display: inline-block; 
+    width: 21%;
+    height: 21%; 
+  
+   
+}
+
+#neptuneWrap {
+    display: inline-block; 
+    width: 17%;
+    height: 17%; 
+    
+   
+}
+
+#plutoWrap {
+    display: inline-block; 
+    width: 5%;
+    height: 5%; 
+    
+   
+}
+
+h1, p {
+ color: white;  
+     position: sticky; 
+    z-index: 10; 
+ text-align: center; 
+ font-family: sans-serif; 
+}
+
+.planetInfo {
+    width: 50%; 
+    height: 300px; 
+    overflow: scroll; 
+    position: sticky; 
+    z-index: 10; 
+    background-color: white;
+    opacity: .60; 
+    display: none; 
+    text-align: center; 
+    margin: -50px auto 10px auto;
+    border-radius: 10px; 
+    padding: 10px; 
+    
+    
+}
+
+.planetInfo h2, p {
+    color: black; 
+}
+
+
+
+.planetInfoShow {
+ 
+    display: block;
+      -webkit-animation: fadeIn 1.5s ease; 
+    animation: fadeIn 1.5s ease; 
+
+}
+
+
+.instructions {
+    text-align: center;
+    color: white; 
+    
+}
+
+.close a {
+    text-align: center;
+    color: black;
+    
+    
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  12% {
+    opacity: .09; }
+  
+  25% {
+    opacity: 0.18; }
+  38% {
+    opacity: 0.27; }
+  50% {
+    opacity: .36; }
+  68% {
+    opacity: 0.45; }
+  75% {
+    opacity: .54; }
+  100% {
+    opacity: .6; } }
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  12% {
+    opacity: .09; }
+  
+  25% {
+    opacity: 0.18; }
+  38% {
+    opacity: 0.27; }
+  50% {
+    opacity: .36; }
+  68% {
+    opacity: 0.45; }
+  75% {
+    opacity: .54; }
+  100% {
+    opacity: .6; } }
+
+
+
+
+.disappear {
+    visibility: hidden; 
+}
+
+/* Quiz Styles */
+
+.quiz-container, .ninja{
+    font-family: sans-serif; 
+    width: 40%;
+    margin: 0 auto; 
+    background-color: white;
+    opacity: .8; 
+    border-radius: 10px;
+    padding: 20px; 
+    text-align: center; 
+
+  position: relative;
+  height: 200px;
+  margin-top: 20px;
+
+}
+.question{
+  font-family: sans-serif; 
+  font-size: 1.4em;
+  margin: 30px 0;   
+
+}
+.answers {
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+.answers label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.button-wrapper {
+    text-align: center; 
+}
+button{
+  font-family: sans-serif;
+    font-size: 22px;
+    background-image: linear-gradient(15deg, #c39e3a, #f0e5c4, #c39e3a);
+    background-size: 200% 200%; 
+    color: black;
+    border: 0px;
+    border-radius:10px;
+    padding: 20px;
+    cursor: pointer;
+    margin: 10px 2px 20px 2px; 
+   
+    padding: 25px; 
+}
+
+button:hover {
+
+        background-image: linear-gradient(15deg, #c39e3a, #f0e5c4, #c39e3a);
+    background-size: 400% 400%; 
+      -webkit-animation: gradientAnimation 4s ease-out infinite;
+    animation: gradientAnimation 4s ease-out infinite;
+}
+
+@-webkit-keyframes gradientAnimation {
+  	0% {
+		background-position: 0% 50%
+	}
+  25% {
+    background-position: 50% 100%
+  }
+	50% {
+		background-position: 100% 50%
+	}
+  75% {
+    background-position: 50% 0%
+  }
+	
+
+}
+
+@keyframes gradientAnimation {
+  	0% {
+		background-position: 0% 50%
+	}
+  25% {
+    background-position: 50% 100%
+  }
+	50% {
+		background-position: 100% 50%
+	}
+  75% {
+    background-position: 50% 0%
+  }
+	
+
+} 
+
+
+.quiz-result {
+    font-family: sans-serif; 
+    font-size: 1.2em; 
+    background: linear-gradient(45deg, aqua, white, aqua); 
+    background-size: 400% 400%; 
+    -webkit-animation: gradientAnimation 4s ease-out infinite;
+     animation: gradientAnimation 4s ease-out infinite;
+    width: 40%; 
+    border-radius: 10px; 
+    margin: 5px auto;  
+    opacity: .8; 
+    height: 30px; 
+    text-align: center; 
+    padding: 5px; 
+     
+    
+}
+
+
+.hidden {
+    display: none;
+}
+.show {
+    display: block; 
+}
+
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+
+
+.form {
+    background-color: white;
+    opacity: .8; 
+    width: 100%; 
+  
+    margin: 5px auto;   
+   
+    text-align: center; 
+    height: 50px; 
+
+}
+
+form label, input {
+    font-family: sans-serif; 
+    font-size: 20px; 
+    margin-top: 10px; 
+}
+
+.button-info {
+    font-size: 12px; 
+}
+
+#repeat {
+    padding: 12px; 
+ 
+  
+}
+
+#button-wrapper-two {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    align-content: center; 
+}
+
+input {
+    border: none; 
+}
+
+
+
+    
+ 
+    
+    

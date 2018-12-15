@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Di Bartolo | CIT261</title>
+		<meta charset="UTF-8"/>
+        <link href="style.css" type="text/css" rel="stylesheet" />
+    	
+    
+        
+	</head>
+	<body onload="checkLS();">
+    <div class="twinkle-wrapper">
+    <nav>
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="quiz.html">quiz</a></li>
+            <li><a href="about.html">about</a></li>
+        
+        </ul>
+        
+    </nav>
+
+  <h1>Are You a Planet Ninja?</h1>
+ <div id="ninja-status" class="ninja hidden ">
+        <h2>You are a <span id="ninja-level"></span></h2>
+        </div>
+<div id="quiz-wrapper" class="quiz-container">
+  <div id="quiz"></div>
+        </div>
+
+        <div id="result" class=" "></div>
+
+    
+    
+<div id="button-wrapper" class="button-wrapper">
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit" class=" ">Submit Quiz</button>
+    </div>
+        
+<div id="storage-form" class="form hidden ">
+    <form>
+
+     <label id="level-label" >Planet Knowledge Level: </label>
+    <input id="level" type="text">
+    </form>
+        </div>
+        <div id="button-wrapper-two" class="button-wrapper">
+ <button id="save" class="hidden " onclick="saveResults()">Save Results</button>   
+
+      
+  
+     <button id="repeat" class="hidden " onclick="takeAgain()">Take the Quiz Again <br><span class="button-info">(this will reset your planet-ninja level)</span></button>    
+            
+        </div>
+    
+
+      
+        </div>
+        
+        
+    
+	</body>
+    <script src="quiz.js"></script>
+</html>

@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Di Bartolo | CIT261</title>
+		<meta charset="UTF-8"/>
+        <link href="style.css" type="text/css" rel="stylesheet" />
+    	
+    
+        
+	</head>
+	<body>
+        <div class="twinkle-wrapper">
+    <nav>
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="quiz.html">quiz</a></li>
+            <li><a href="about.html">about</a></li>
+        
+        </ul>
+        
+    </nav>
+    <div id="comet" class="comet"></div>
+        <div id="comet-two" class="comet-two"></div>
+        
+        
+    <div id="text">
+        </div>
+  
+    <div id="planetWrapper" class="wrapper">
+        <div id="sunWrap" class="planet" onclick="toggleInfo(this.id)" >
+            <img id="sun" src="sun.svg" alt="Earth illustration.">
+        </div>
+       
+        <div id="mercuryWrap" class="planet" onclick="toggleInfo(this.id)">
+            <img id="mercury" src="mercury.svg" alt="Earth illustration.">
+        </div>
+        <div id="venusWrap" class="planet" onclick="toggleInfo(this.id)">
+            <img id="venus" src="venus.svg" alt="Earth illustration.">
+        </div>
+        <div id="earthWrap" class="planet" onclick="toggleInfo(this.id)">
+            <img id="earth" src="earth.svg" alt="Earth illustration.">
+        </div>
+        <div id="marsWrap" class="planet" onclick="toggleInfo(this.id)">
+            <img id="mars" src="mars.svg" alt="Earth illustration.">
+        </div>
+        <div id="jupiterWrap" class="planet" onclick="toggleInfo(this.id)">
+            <img id="jupiter" src="jupiter.svg" alt="Earth illustration.">
+        </div>
+        <div id="saturnWrap" class="planet" onclick="toggleInfo(this.id)">
+            <img id="saturn" src="saturn.svg" alt="Earth illustration.">
+        </div>
+        <div id="uranusWrap" class="planet" onclick="toggleInfo(this.id)">
+            <img id="uranus" src="uranus.svg" alt="Earth illustration.">
+        </div>
+        <div id="neptuneWrap" class="planet" onclick="toggleInfo(this.id)">
+            <img id="neptune" src="neptune.svg" alt="Earth illustration.">
+        </div>
+        <div id="plutoWrap" class="planet" onclick="toggleInfo(this.id)">
+            <img id="pluto" src="pluto.svg" alt="Earth illustration.">
+        </div>
+     
+        </div>
+        
+        <div id="welcome" class="welcome ">
+            <h1>Let's learn about the planets! </h1>
+            <p id="instructions" class="instructions ">Click any planet to begin!</p>
+            
+            
+        </div>
+        
+        <div id="infoDiv" class="planetInfo">
+           <span class="close hidden " id="close"><a href="#" onclick="fadeInfo()">close</a></span>
+           <h2 id="planet-name"></h2>
+           <p id="planet-facts"></p>
+        
+        </div>
+      
+
+
+        </div>
+		
+		
+	</body>
+    <script src="planets.js"></script>
+</html>
